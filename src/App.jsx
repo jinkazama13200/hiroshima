@@ -19,6 +19,7 @@ function App() {
         </Route>
         <Route path="pagination" element={<Pagination />} />
         <Route path="grid" element={<Grid />} />
+        <Route path="*" element={<h1>NOT FOUND</h1>} />
       </Routes>
     </Router>
   );
