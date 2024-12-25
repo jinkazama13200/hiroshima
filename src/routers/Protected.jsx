@@ -4,7 +4,8 @@ import { useUserContext } from "../contexts/UserContext";
 const Protected = ({ children }) => {
   const { currentUser } = useUserContext();
   if (!currentUser || currentUser.maLoaiNguoiDung !== "QuanTri") {
-    return <Navigate to="/" />;
+    localStorage.removeItem("currentUser");
+    return <Navigate to="/" replace />;
   }
 
   return children || <Outlet />;
