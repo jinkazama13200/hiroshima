@@ -7,8 +7,8 @@ const Menubar = () => {
   return (
     <div className="fixed bottom-5 left-1/2 flex -translate-x-[50%] items-center justify-center gap-2 rounded-full bg-white p-2 shadow-md lg:hidden">
       <MenubarItem Icon={Home} url="/" />
-      <MenubarItem Icon={Film} url="movies" />
-      <MenubarItem Icon={Users} url="users" />
+      <MenubarItem Icon={Film} url="/movies" />
+      <MenubarItem Icon={Users} url="/users" />
     </div>
   );
 };

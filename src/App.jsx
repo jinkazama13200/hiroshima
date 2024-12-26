@@ -5,6 +5,7 @@ import Protected from "./routers/Protected";
 import Users from "./pages/users/Users";
 import Pagination from "./pages/pagination/Pagination";
 import Grid from "./pages/grid";
+import Movies from "./pages/movies/Movies";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Main />} />
           <Route element={<Protected />}>
-            <Route path="movies" element={<h1>movies</h1>} />
+            <Route path="movies" element={<Movies />} />
             <Route path="users" element={<Users />} />
           </Route>
         </Route>
