@@ -14,7 +14,7 @@ const Users = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [open, setOpen] = useState(false);
 
-  const limit = 10;
+  const limit = 5;
 
   const theadData = ["Username", "Position", "Settings"];
 
