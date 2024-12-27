@@ -1,11 +1,16 @@
 import { Search } from "lucide-react";
 import Button from "../Button/Button";
 
-const Searchbar = ({ className }) => {
+const Searchbar = ({ className, searchValue, onSearchValue, onSubmit }) => {
   return (
-    <form className={`items-center justify-center lg:flex ${className || ""}`}>
+    <form
+      onSubmit={onSubmit}
+      className={`items-center justify-center lg:flex ${className || ""}`}
+    >
       <div className="flex max-w-[400px] flex-grow">
         <input
+          onChange={onSearchValue}
+          value={searchValue}
           className="w-full rounded-l-full border border-r-0 border-secondary-default px-4 shadow-inner outline-none focus:shadow-secondary-default"
           type="text"
           placeholder="Search..."

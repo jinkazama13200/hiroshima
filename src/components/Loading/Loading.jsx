@@ -2,7 +2,7 @@ import { LoaderCircle } from "lucide-react";
 
 const Loading = ({ children, size = 50 }) => {
   return (
-    <div className="absolute left-1/2 top-1/2 flex -translate-x-[50%] -translate-y-[50%] items-center justify-center gap-2 lg:-translate-x-[0]">
+    <div className="absolute left-1/2 top-1/2 flex w-[max-content] -translate-x-[50%] items-center justify-center gap-2">
       <LoaderCircle
         size={size}
         className="animate-spin text-secondary-default"
