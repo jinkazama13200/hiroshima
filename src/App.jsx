@@ -3,9 +3,8 @@ import MainLayout from "./layouts/MainLayout";
 import Main from "./pages/main";
 import Protected from "./routers/Protected";
 import Users from "./pages/users/Users";
-import Pagination from "./pages/pagination/Pagination";
-import Grid from "./pages/grid";
 import Movies from "./pages/movies/Movies";
+import EditMovie from "./pages/movies/EditMovie";
 
 function App() {
   return (
@@ -16,10 +15,9 @@ function App() {
           <Route element={<Protected />}>
             <Route path="movies" element={<Movies />} />
             <Route path="users" element={<Users />} />
+            <Route path="movies/:movieId" element={<EditMovie />} />
           </Route>
         </Route>
-        <Route path="pagination" element={<Pagination />} />
-        <Route path="grid" element={<Grid />} />
         <Route path="*" element={<h1>NOT FOUND</h1>} />
       </Routes>
     </Router>

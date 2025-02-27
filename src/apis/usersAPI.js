@@ -9,7 +9,7 @@ export const userSignIn = async (data) => {
   }
 };
 
-export const getUsers = async (page, limit) => {
+export const getUsers = async (page, limit, searchValue) => {
   try {
     const response = await fetcher.get(
       `/api/QuanLyNguoiDung/LayDanhSachNguoiDungPhanTrang`,
@@ -17,6 +17,7 @@ export const getUsers = async (page, limit) => {
         params: {
           soTrang: page,
           soPhanTuTrenTrang: limit,
+          tuKhoa: searchValue || undefined,
         },
       },
     );

@@ -1,7 +1,7 @@
 import colors from "tailwindcss/colors";
 
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -13,5 +13,19 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("rippleui")],
+
+  /** @type {import('rippleui').Config} */
+  rippleui: {
+    removeThemes: ["dark"],
+    themes: [
+      {
+        themeName: "light",
+        colorScheme: "light",
+        colors: {
+          secondary: colors.green[400],
+        },
+      },
+    ],
+  },
 };

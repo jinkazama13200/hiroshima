@@ -53,12 +53,12 @@ const Movies = () => {
     return item?.tenPhim
       .trim()
       .toLowerCase()
-      .includes(debouncedSearchValue.toLowerCase());
+      .includes(debouncedSearchValue.trim().toLowerCase());
   });
 
   useEffect(() => {
     fetchMovies();
-  }, [currentPage, debouncedSearchValue]);
+  }, [debouncedSearchValue]);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width:767px)");
@@ -107,7 +107,7 @@ const Movies = () => {
           </div>
         </>
       )}
-      {searchResult.length == 0 && !initialFetch && <NoResult />}
+      {!searchResult.length && !initialFetch && <NoResult />}
     </>
   );
 };
